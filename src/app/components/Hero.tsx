@@ -1,4 +1,4 @@
-import heroImg from "figma:asset/7cd1c734a1209a4215d8a24ba00c5fa4596ac7f0.png";
+import heroImg from "../assets/hero.png";
 import { ChevronDown } from "lucide-react";
 
 export function Hero() {
