@@ -1,4 +1,4 @@
-import heroImg from "../assets/hero.png";
+import heroImg from "../../assets/hero.png";
 import { ChevronDown } from "lucide-react";
 
 export function Hero() {
