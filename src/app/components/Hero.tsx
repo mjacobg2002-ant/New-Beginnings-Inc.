@@ -4,15 +4,14 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/assets/hero.png" // <-- use public folder asset
-          alt="Community meeting"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1a1528]/95 via-[#2d2545]/80 to-[#2d2545]/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1528]/40 via-transparent to-transparent" />
-      </div>
+   <div className="absolute inset-0 z-0">
+  <img
+    src="/assets/hero.png"
+    alt="Community meeting"
+    className="w-full h-full object-cover"
+  />
+  <div className="absolute inset-0 bg-gradient-to-r ..." />
+</div>
 
       {/* Decorative accent line */}
       <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#6b8e5e] via-[#a8d98a] to-transparent z-10" />
