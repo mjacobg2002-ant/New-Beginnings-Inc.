@@ -1,4 +1,3 @@
-import heroImg from "../../assets/hero.png";
 import { ChevronDown } from "lucide-react";
 
 export function Hero() {
@@ -7,7 +6,7 @@ export function Hero() {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroImg}
+          src="/assets/hero.png" // <-- use public folder asset
           alt="Community meeting"
           className="w-full h-full object-cover"
         />
