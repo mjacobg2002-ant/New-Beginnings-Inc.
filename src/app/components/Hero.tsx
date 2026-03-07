@@ -7,7 +7,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="/assets/hero.png" // <-- use public folder asset
-          alt="Community meeting"
+          alt="Community disability support program meeting"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1a1528]/95 via-[#2d2545]/80 to-[#2d2545]/50" />
