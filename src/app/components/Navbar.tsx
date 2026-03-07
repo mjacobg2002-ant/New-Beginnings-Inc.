@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "figma:asset/d02e8e71435e15ac05e9e8703e171dc2ffc18fc9.png";
+import logo from "asset/d02e8e71435e15ac05e9e8703e171dc2ffc18fc9.png";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
