@@ -6,7 +6,7 @@ export function Hero() {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="public/assets/hero.png" // <-- use public folder asset
+          src="assets/hero.png" // <-- use public folder asset
           alt="Community meeting"
           className="w-full h-full object-cover"
         />
