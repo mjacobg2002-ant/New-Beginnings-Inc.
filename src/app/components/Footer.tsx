@@ -118,7 +118,7 @@ export function Footer() {
             <ul className="space-y-3">
               {[
                 "123 Community Drive, Suite 100",
-                "(555) 123-4567",
+                "(410) 597-8092",
                 "info@newbeginnings.org",
                 "Mon – Fri: 8am – 5pm",
               ].map((item) => (

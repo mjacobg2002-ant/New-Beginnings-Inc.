@@ -34,12 +34,12 @@ export function CTA() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-10">
               <a
-                href="tel:+15551234567"
+                href="tel:+14105978092"
                 className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#6b8e5e] text-white px-9 py-4 rounded-full hover:bg-[#5a7d4e] hover:shadow-[0_8px_30px_rgba(107,142,94,0.35)] transition-all duration-300 hover:-translate-y-px"
                 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.95rem" }}
               >
                 <Phone size={17} />
-                (555) 123-4567
+                (410) 597-8092
               </a>
               <a
                 href="mailto:info@newbeginnings.org"
