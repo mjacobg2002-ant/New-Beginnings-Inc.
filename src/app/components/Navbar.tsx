@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 import { Menu, X } from "lucide-react";
 import logo from "../../assets/logo.png";
 
@@ -24,7 +25,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 lg:h-22">
-          <a href="#" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <img
               src={logo}
               alt="New Beginnings Logo"
@@ -44,13 +45,13 @@ export function Navbar() {
                 Support Services
               </span>
             </div>
-          </a>
+          </Link>
 
           <div className="hidden lg:flex items-center gap-9">
             {links.map((link) => (
-              <a
+              <Link
                 key={link}
-                href={`#${link.toLowerCase()}`}
+                to={`/#${link.toLowerCase()}`}
                 className={`relative transition-colors duration-300 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#6b8e5e] after:transition-all after:duration-300 hover:after:w-full ${
                   scrolled || mobileOpen
                     ? "text-[#4a3f5c] hover:text-[#6b8e5e]"
@@ -59,10 +60,10 @@ export function Navbar() {
                 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.9rem", letterSpacing: "0.02em" }}
               >
                 {link}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              to="/#contact"
               className={`px-7 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:-translate-y-px ${
                 scrolled || mobileOpen
                   ? "bg-[#6b8e5e] text-white hover:bg-[#5a7d4e]"
@@ -71,7 +72,7 @@ export function Navbar() {
               style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.875rem", letterSpacing: "0.02em" }}
             >
               Get Started
-            </a>
+            </Link>
           </div>
 
           <button
@@ -93,25 +94,25 @@ export function Navbar() {
       >
         <div className="bg-white border-t border-gray-100/80 px-5 py-6 space-y-1 shadow-xl">
           {links.map((link) => (
-            <a
+            <Link
               key={link}
-              href={`#${link.toLowerCase()}`}
+              to={`/#${link.toLowerCase()}`}
               className="block text-[#2d2545] py-3 px-4 rounded-xl hover:bg-[#f5f3f0] hover:text-[#6b8e5e] transition-all"
               style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "1rem" }}
               onClick={() => setMobileOpen(false)}
             >
               {link}
-            </a>
+            </Link>
           ))}
           <div className="pt-3">
-            <a
-              href="#contact"
+            <Link
+              to="/#contact"
               className="block text-center bg-[#6b8e5e] text-white px-6 py-3.5 rounded-full hover:bg-[#5a7d4e] transition-all shadow-md"
               style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.95rem" }}
               onClick={() => setMobileOpen(false)}
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       </div>

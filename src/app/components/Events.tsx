@@ -1,4 +1,4 @@
-import { CalendarDays, Clock, MapPin, ArrowRight, Users } from "lucide-react";
+import { Clock, MapPin, ArrowRight, Users } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const events = [
@@ -204,17 +204,6 @@ export function Events() {
           })}
         </div>
 
-        {/* View all link */}
-        <div className="text-center mt-10">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 bg-[#2d2545] text-white px-8 py-3.5 rounded-full hover:bg-[#3d3460] hover:shadow-[0_8px_24px_rgba(45,37,69,0.25)] transition-all duration-300 hover:-translate-y-px"
-            style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.875rem", letterSpacing: "0.02em" }}
-          >
-            <CalendarDays size={16} />
-            View Full Calendar
-          </a>
-        </div>
       </div>
     </section>
   );

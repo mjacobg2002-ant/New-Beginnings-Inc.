@@ -1,32 +1,7 @@
 import { ArrowRight, Clock } from "lucide-react";
+import { Link } from "react-router";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-
-const articles = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1766808982363-7df749493298?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBjYXJlZ2l2ZXIlMjBzdXBwb3J0JTIwaGFuZHN8ZW58MXx8fHwxNzcyODU2ODI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    title: "Understanding Intellectual and Developmental Disabilities",
-    desc: "Learn about common developmental disabilities, support strategies, and how programs can help individuals live more independent lives.",
-    readTime: "6 min read",
-    tag: "Education",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1695370993586-12fdbea785c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmNsdXNpdmUlMjB3b3JrcGxhY2UlMjBlbXBsb3ltZW50JTIwZGl2ZXJzaXR5fGVufDF8fHx8MTc3Mjg1NjgyNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    title: "How Supported Employment Programs Help Build Independence",
-    desc: "Discover how supported employment programs help individuals develop job skills and find meaningful work opportunities.",
-    readTime: "5 min read",
-    tag: "Employment",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1770096679916-2cd9c720d400?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXZlbG9wbWVudGFsJTIwbGVhcm5pbmclMjBlZHVjYXRpb24lMjBjbGFzc3Jvb218ZW58MXx8fHwxNzcyODU2ODI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    title: "Choosing the Right Disability Support Program for Your Family",
-    desc: "A guide to understanding different disability services and how to choose the right support program for your needs.",
-    readTime: "7 min read",
-    tag: "Guide",
-  },
-];
+import { articles } from "../data/articles";
 
 export function Resources() {
   return (
@@ -57,9 +32,10 @@ export function Resources() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {articles.map((a) => (
-            <article
-              key={a.title}
-              className="group bg-white rounded-2xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500 border border-[#eae7e2] hover:border-[#d5d0c8]"
+            <Link
+              to={`/knowledge/${a.slug}`}
+              key={a.slug}
+              className="group bg-white rounded-2xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500 border border-[#eae7e2] hover:border-[#d5d0c8] block"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <ImageWithFallback
@@ -103,15 +79,14 @@ export function Resources() {
                 >
                   {a.desc}
                 </p>
-                <a
-                  href="#"
+                <span
                   className="inline-flex items-center gap-2 text-[#6b8e5e] group-hover:gap-3 transition-all duration-300"
                   style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.875rem", letterSpacing: "0.02em" }}
                 >
                   Read More <ArrowRight size={15} />
-                </a>
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>
