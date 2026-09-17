@@ -1,5 +1,4 @@
 import logo from "../../assets/logo.png";
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -30,23 +29,6 @@ export function Footer() {
               Empowering individuals with intellectual and developmental
               disabilities to live fulfilling, independent lives.
             </p>
-            <div className="flex gap-3">
-              {[
-                { Icon: Facebook, label: "Facebook" },
-                { Icon: Instagram, label: "Instagram" },
-                { Icon: Twitter, label: "Twitter" },
-                { Icon: Linkedin, label: "LinkedIn" },
-              ].map(({ Icon, label }) => (
-                <a
-                  key={label}
-                  href="#"
-                  aria-label={label}
-                  className="w-9 h-9 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center hover:bg-[#6b8e5e] hover:border-[#6b8e5e] transition-all duration-300"
-                >
-                  <Icon size={15} strokeWidth={1.5} />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Services */}
